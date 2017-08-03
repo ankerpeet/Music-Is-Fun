@@ -5,21 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Music Is Fun!</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <title>Music Search</title>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-    <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
-        <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
-        <div class="form-group">
-            <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
-            <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
-        </div>
-    </form>
-    <div id="songs">
-
+    <div class="container">
+        <form class="form-inline search" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
+            <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
+            <div class="form-group">
+                <input id="search" type="text" spellcheck="false" class="form-control" name="artist" placeholder="Artist Name..." />
+                <button type="submit" class="btn btn-primary" id="get-music-button">Search Music</button>
+            </div>
+        </form>
+        <div><h3 class="text-center" id="message"></h3></div>
+        <div class="row" id="songs"></div>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
     <script src="itunes-service.js"></script>
