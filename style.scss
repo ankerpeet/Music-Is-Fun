@@ -9,8 +9,8 @@
 }
 .albumArt {
     padding-top: 10px;
-    min-width: 100px;
-    min-height: 100px;
+    max-width: 100px;
+    max-height: 100px;
 }
 audio {
     background-color: white;
